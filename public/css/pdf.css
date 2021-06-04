@@ -1,0 +1,114 @@
+.table{
+	font-size: 10px;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+/*.table>tfoot>tr>td,*/
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+  padding: 2px 5px;
+}
+
+.table>tfoot>tr>td {
+  padding: 10px;
+}
+
+.table>tfoot>tr{
+  font-weight: 700;
+  font-size:14px;
+}
+
+th.right, td.right{
+  text-align: right;
+}
+
+th.center, td.center{
+  text-align: center;
+}
+
+h3.title{
+  margin-top: 0px;
+  width: 50%;
+  display: inline-block;
+}
+
+.date{
+  padding-top: 10px;
+  display: inline-block;
+  float: right;
+}
+
+.filtros{
+  float: left;
+  width: 80%;
+}
+
+.box-header>.box-tools {
+  margin-top: 0px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+}
+
+.bg-red,
+.bg-yellow,
+.bg-aqua,
+.bg-blue,
+.bg-light-blue,
+.bg-green,
+.bg-navy,
+.bg-teal,
+.bg-olive,
+.bg-lime,
+.bg-orange,
+.bg-fuchsia,
+.bg-purple,
+.bg-maroon,
+.bg-black,
+.bg-red-active,
+.bg-yellow-active,
+.bg-aqua-active,
+.bg-blue-active,
+.bg-light-blue-active,
+.bg-green-active,
+.bg-navy-active,
+.bg-teal-active,
+.bg-olive-active,
+.bg-lime-active,
+.bg-orange-active,
+.bg-fuchsia-active,
+.bg-purple-active,
+.bg-maroon-active,
+.bg-black-active,
+.btn-warning,
+.btn-success,
+.btn-info,
+.btn-primary,
+.btn-danger
+{
+  background-color: #fff !important;
+  color: black !important;
+  border-color: black;
+}
+
+a {
+  color: black !important;
+}
+
+tr.group{
+  font-weight: bold;
+  font-size: 11px;
+}
+
+tr.total{
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.total>td{
+  background-color: beige;
+}
