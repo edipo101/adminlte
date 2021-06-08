@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="{{asset('dist/css/AdminLTE.min.css')}}">
   <!-- bootstrap datepicker -->
   <link rel="stylesheet" href="{{asset('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{asset('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
 
   <link rel="stylesheet" href="{{asset('dist/css/skins/_all-skins.min.css')}}">
 
@@ -268,6 +270,9 @@
 <script src="{{asset('dist/js/demo.js')}}"></script>
 <!-- bootstrap datepicker -->
 <script src="{{asset('bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js')}}"></script>
+<!-- DataTables -->
+<script src="{{asset('bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
 
 <script>
   function dateFormatSql(dateSql){

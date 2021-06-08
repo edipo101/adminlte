@@ -17,8 +17,8 @@
           <a href="{{route('home')}}"><i class="fa fa-dashboard"></i> <span>Inicio</span></a>
         </li>
         {{-- <li class="header">GRUPO</li> --}}
-        <li class="{{!Route::is('home') ?: 'active'}}">
-          <a href="#"><i class="fa fa-users"></i> <span>Tareas pendientes</span></a>
+        <li class="{{!Route::is('products.index') ?: 'active'}}">
+          <a href="{{route('products.index')}}"><i class="fa fa-users"></i> <span>Productos</span></a>
         </li>
       </ul>
     </section>

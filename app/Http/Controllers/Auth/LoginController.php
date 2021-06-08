@@ -20,7 +20,7 @@ class LoginController extends Controller
 
     public function login(){
         $credentials = $this->validate(request(), [
-            'login' => 'required|string',
+            'username' => 'required|string',
             'password' => 'required|string'
         ]);
 
@@ -29,12 +29,12 @@ class LoginController extends Controller
         }
 
         return back()
-            ->withErrors(['login' => '¡Las credenciales de acceso son incorrectas!'])
-            ->withInput(request(['login']));
+            ->withErrors(['username' => '¡Las credenciales de acceso son incorrectas!'])
+            ->withInput(request(['username']));
     }
 
     public function logout(){
         Auth::logout();
         return redirect('/');
-    }   
+    }
 }
