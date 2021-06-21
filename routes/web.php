@@ -10,3 +10,6 @@ Route::get('login', 'Auth\LoginController@showLoginForm')->name('login.show');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('products','ProductController@index')->name('products.index');
+Route::get('products/datatable','ProductController@dataTable')->name('products.datatable');
+Route::get('products/create','ProductController@create')->name('products.create');
+Route::get('tasks','TaskController@index')->name('tasks.index');

@@ -8,31 +8,29 @@ use DataTables;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $products = Product::all();
         // return $products;
-        return view('products.index', compact('products'));
-    }
+        return view('products.product-index', compact('products'));
+    } 
 
-    public function products(){
+    public function dataTable(){
         $products = Product::with('category')->get();
-        return DataTables::of($products)->toJson();
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+        return DataTables::of($products)
+            ->addColumn('actions', function(){
+                return view('partials._actions');
+            })
+            ->toJson();
+    }   
+    
     public function create()
     {
-        //
+        return view('products.product-form');
     }
 
     /**

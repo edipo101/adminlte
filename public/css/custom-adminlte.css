@@ -1,0 +1,25 @@
+.content-wrapper{
+  background: white;
+}
+
+.content-header{
+  padding: 15px 40px 0 40px;
+}
+
+.content{
+  padding: 15px 40px;
+}
+
+.box{
+  border-top: none;
+  box-shadow: none;
+}
+
+.box-body{
+  padding: 10px 0px;
+}
+
+.box-footer{
+  border-top: none;
+  padding: 10px 0px;
+}
