@@ -6,10 +6,12 @@ use App\Product;
 use Faker\Generator as Faker;
 
 $factory->define(Product::class, function (Faker $faker) {
+    $purchase_price = rand(5, 100);
+    $sale_price = $purchase_price + $purchase_price * 0.25;
     return [
-        'name' => $faker->word(),
-        'description' => $faker->sentence(3),
-        'measure' => $faker->word(),
-        'category_id' => rand(1, 20)
+    	'purchase_price' => $purchase_price,
+    	'sale_price' => $sale_price,
+    	'utility' => $sale_price - $purchase_price,
+        'category_id' => rand(1, 4)
     ];
 });

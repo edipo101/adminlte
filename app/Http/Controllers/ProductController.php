@@ -20,8 +20,19 @@ class ProductController extends Controller
     } 
 
     public function dataTable(){
-        $products = Product::with('category')->get();
+        $products = Product::with('category')->with('dvd')->get();
         return DataTables::of($products)
+            ->addColumn('details', function($product){
+                if ($product->category_id == 1){
+                    $dvd = $product->dvd;
+                    return $dvd->title.'; Dvds: '.$dvd->number_discs;    
+                }
+                else{
+                    $garment = $product->garment;
+                    return $garment->type.'; '.$garment->thematic.'; TALLA: '.$garment->size;
+                }
+                
+            })
             ->addColumn('actions', function(){
                 return view('partials._actions');
             })

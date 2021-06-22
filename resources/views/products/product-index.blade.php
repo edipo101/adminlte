@@ -22,11 +22,11 @@
 					<thead>
 						<tr>
 							<th>Id</th>
-							<th>Nombre</th>
-							<th>Descripción</th>
-							<th>Categoria</th>
-							<th>Unid. Medida</th>
-							<th>Perecedero</th>
+							<th>Detalle</th>
+							<th>Categoría</th>
+							<th>PrecioCompra</th>
+							<th>PrecioVenta</th>
+							<th>Utilidad</th>
 							<th>...</th>
 						</tr>
 					</thead>
@@ -53,11 +53,11 @@
 			buttons: ['csv', 'excel', 'print'],
 			"columns": [
 				{ "data": "id" },
-				{ "data": "name" },
-				{ "data": "description" },
+				{ "data": "details" },
 				{ "data": "category.name" },
-				{ "data": "measure" },
-				{ "data": "perisable" },
+				{ "data": "purchase_price" },
+				{ "data": "sale_price" },
+				{ "data": "utility" },
 				{ "data": "actions" },
 			]
 		});

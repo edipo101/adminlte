@@ -15,12 +15,13 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description')->nullable();
-            $table->string('measure')->nullable()->comment('Unidad de medida');
-            $table->boolean('perisable')->default(0)->comment('Perecedero');
-            $table->timestamps();
+            $table->double('purchase_price');   //Precio de compra
+            $table->double('sale_price');       //Precio de venta
+            $table->double('utility');           //Precio de venta
+            $table->string('photo')->nullable();            //Fotografia
+            $table->string('barcode')->nullable();          //Codigo de barras
             $table->unsignedBigInteger('category_id');
+            $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')
             ->onDelete('cascade');
